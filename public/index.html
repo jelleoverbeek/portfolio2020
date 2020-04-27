@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="intro">
+        <p>
+          I’m Jelle, a designer that also loves to
+          <a href="//github.com/jelleoverbeek">code</a>. Currently I’m doing
+          product design at
+          <a href="https://ticketswap.com/" target="_blank">TicketSwap</a>.
+        </p>
+        <img
+          class="avatar"
+          src="img/avatar.jpg"
+          srcset="img/avatar@2x.jpg 2x"
+        />
+      </header>
+      <article class="case">
+        <header>
+          <h2>TicketSwap</h2>
+          <p>
+            TicketSwap is platform where over 5 million music fans buy and sell
+            tickets. Ticket prices are capped at 120% of the original price to
+            keep it fair and tickets are being checked for validity to make sure
+            all transactions are secure.
+          </p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Event page</h3>
+            <p>
+              The place where thousands of fans are trying to get a ticket,
+              daily.
+            </p>
+            <img src="img/thumb-event.png" alt="" />
+          </article>
+
+          <article class="card">
+            <h3>Following artists</h3>
+            <p>
+              The latest of your favourite artists, anywhere on the platform.
+            </p>
+            <img
+              src="img/thumb-event.png"
+              srcset="img/thumb-event@2x.png 2x"
+              alt=""
+            />
+          </article>
+
+          <article class="card">
+            <h3>Discovery</h3>
+            <p>
+              Finding the right event on the right day.
+            </p>
+            <img src="img/thumb-event.png" alt="" />
+          </article>
+        </div>
+      </article>
+
+      <article class="case">
+        <header>
+          <h2>Abstract To Do app</h2>
+          <p>
+            When working with Abstract we made use of the design review feature.
+            While this feature was pretty useful in general I was struggling
+            with one thing: having a clear overview of all the given feedback
+            and being able to check them off. When Abstract released their SDK I
+            used this to create an app to solve this problem and learn how to
+            use Electron and React.
+          </p>
+          <div class="actions">
+            <a href="#">Github</a>
+            <a href="#">Download</a>
+          </div>
+        </header>
+        <div class="video-container">
+          <video src="videos/abstract-to-do.mp4" muted loop></video>
+          <div class="video-actions">
+            <button class="video-button playing hidden">
+              <img src="img/play.svg" />
+              Playing
+            </button>
+            <button class="video-button paused">
+              <img src="img/pause.svg" />
+              Paused
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <header>
+          <h2>Desize</h2>
+          <p>
+            I was in search of a small side project to learn Typescript. I came
+            up with the idea to create a small app that allowed users to quickly
+            resize, compress and convert big amounts of images. The result was
+            the app Desize.
+          </p>
+          <div class="actions">
+            <a href="#">Github</a>
+            <a href="#">Download</a>
+          </div>
+        </header>
+        <div class="video-container">
+          <video src="videos/desize.mp4" muted loop></video>
+          <div class="video-actions">
+            <button class="video-button playing hidden">
+              <img src="img/play.svg" />
+              Playing
+            </button>
+            <button class="video-button paused">
+              <img src="img/pause.svg" />
+              Paused
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
