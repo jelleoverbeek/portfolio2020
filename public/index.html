@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Jelle | Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
@@ -12,8 +12,8 @@
   </head>
   <body>
     <main>
-      <header class="intro">
-        <p>
+      <section class="intro">
+        <p class="emphasized">
           I’m Jelle, a designer that also loves to
           <a href="//github.com/jelleoverbeek">code</a>. Currently I’m doing
           product design at
@@ -24,8 +24,9 @@
           src="img/avatar.jpg"
           srcset="img/avatar@2x.jpg 2x"
         />
-      </header>
-      <article class="case">
+      </section>
+
+      <section>
         <header>
           <h2>TicketSwap</h2>
           <p>
@@ -37,98 +38,130 @@
         </header>
 
         <div class="cards">
-          <article class="card">
-            <h3>Event page</h3>
-            <p>
-              The place where thousands of fans are trying to get a ticket,
-              daily.
-            </p>
-            <img src="img/thumb-event.png" alt="" />
-          </article>
+          <a href="event-page.html">
+            <article class="card">
+              <div class="card__left">
+                <img
+                  src="img/thumb-event.png"
+                  srcset="img/thumb-event.png 1x, img/thumb-event@2x.png 2x"
+                />
+              </div>
+              <div class="card__right">
+                <h3>Event page</h3>
+                <p>
+                  The place where thousands of fans are trying to get a ticket,
+                  daily.
+                </p>
+              </div>
+            </article>
+          </a>
 
           <article class="card">
-            <h3>Following artists</h3>
-            <p>
-              The latest of your favourite artists, anywhere on the platform.
-            </p>
-            <img
-              src="img/thumb-event.png"
-              srcset="img/thumb-event@2x.png 2x"
-              alt=""
-            />
+            <div class="card__left">
+              <img
+                src="img/thumb-artists.png"
+                srcset="img/thumb-artists.png 1x, img/thumb-artists@2x.png 2x"
+              />
+            </div>
+            <div class="card__right">
+              <h3>Following artists</h3>
+              <p>
+                The latest of your favourite artists, anywhere on the platform.
+              </p>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Discovery</h3>
-            <p>
-              Finding the right event on the right day.
-            </p>
-            <img src="img/thumb-event.png" alt="" />
-          </article>
+          <a href="discover.html">
+            <article class="card">
+              <div class="card__left">
+                <img
+                  src="img/thumb-discover.png"
+                  srcset="
+                    img/thumb-discover.png    1x,
+                    img/thumb-discover@2x.png 2x
+                  "
+                />
+              </div>
+              <div class="card__right">
+                <h3>Discovery</h3>
+                <p>
+                  Finding the right event on the right day.
+                </p>
+              </div>
+            </article>
+          </a>
         </div>
-      </article>
+      </section>
 
-      <article class="case">
+      <section>
         <header>
-          <h2>Abstract To Do app</h2>
+          <h2>Side projects</h2>
           <p>
-            When working with Abstract we made use of the design review feature.
-            While this feature was pretty useful in general I was struggling
-            with one thing: having a clear overview of all the given feedback
-            and being able to check them off. When Abstract released their SDK I
-            used this to create an app to solve this problem and learn how to
-            use Electron and React.
+            While I work as a product designer during my day job I focus on
+            keeping up my code skills during my side projects. In the past year
+            I learned how to use React, Electron and Typescript while solving
+            some productivity issues using the tools below.
           </p>
-          <div class="actions">
-            <a href="#">Github</a>
-            <a href="#">Download</a>
-          </div>
         </header>
-        <div class="video-container">
-          <video src="videos/abstract-to-do.mp4" muted loop></video>
-          <div class="video-actions">
-            <button class="video-button playing hidden">
-              <img src="img/play.svg" />
-              Playing
-            </button>
-            <button class="video-button paused">
-              <img src="img/pause.svg" />
-              Paused
-            </button>
-          </div>
-        </div>
-      </article>
 
-      <article class="case">
-        <header>
-          <h2>Desize</h2>
-          <p>
-            I was in search of a small side project to learn Typescript. I came
-            up with the idea to create a small app that allowed users to quickly
-            resize, compress and convert big amounts of images. The result was
-            the app Desize.
-          </p>
-          <div class="actions">
-            <a href="#">Github</a>
-            <a href="#">Download</a>
-          </div>
-        </header>
-        <div class="video-container">
-          <video src="videos/desize.mp4" muted loop></video>
-          <div class="video-actions">
-            <button class="video-button playing hidden">
-              <img src="img/play.svg" />
-              Playing
-            </button>
-            <button class="video-button paused">
-              <img src="img/pause.svg" />
-              Paused
-            </button>
-          </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card__left">
+              <img
+                src="img/thumb-abstract.png"
+                srcset="img/thumb-abstract.png 1x, img/thumb-abstract@2x.png 2x"
+              />
+            </div>
+            <div class="card__right">
+              <h3>Abstract To Do</h3>
+              <p>
+                Automatic to do lists for design feedback.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__left">
+              <img
+                src="img/thumb-desize.png"
+                srcset="img/thumb-desize.png 1x, img/thumb-desize@2x.png 2x"
+              />
+            </div>
+            <div class="card__right">
+              <h3>Desize</h3>
+              <p>
+                Simple image resizer, compressor, and converter
+              </p>
+            </div>
+          </article>
         </div>
-      </article>
+      </section>
     </main>
 
-    <script src="js/app.js"></script>
+    <footer>
+      <section class="footer__section">
+        <div>
+          <a href="mailto:overbeekjelle@gmail.com">overbeekjelle@gmail.com</a>
+        </div>
+
+        <div class="footer__social">
+          <a class="footer__social-icon" href="//dribbble.com/jelleoverbeek">
+            <img src="img/dribbble.svg" />
+          </a>
+          <a class="footer__social-icon" href="//github.com/jelleoverbeek">
+            <img src="img/github.svg" />
+          </a>
+          <a class="footer__social-icon" href="//twitter.com/jelleoverbeek">
+            <img src="img/twitter.svg" />
+          </a>
+          <a
+            class="footer__social-icon"
+            href="//www.linkedin.com/in/jelle-overbeek-a595b246/"
+          >
+            <img src="img/linkedin.svg" />
+          </a>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

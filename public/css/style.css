@@ -4,7 +4,8 @@
   --white: rgba(255, 255, 255, 1);
   --white-80: rgba(255, 255, 255, 0.8);
   --white-20: rgba(255, 255, 255, 0.2);
-  --text: rgba(0, 0, 0, 1);
+  --dark: rgba(0, 0, 0, 1);
+  --text: var(--dark);
   --text-60: rgba(0, 0, 0, 0.6);
   --text-40: rgba(0, 0, 0, 0.4);
   --text-20: rgba(0, 0, 0, 0.2);
@@ -62,8 +63,28 @@ h5 {
 p {
   font-size: 20px;
   color: var(--text-60);
-  margin: 4px 0 24px 0;
+  margin: 4px 0 16px 0;
   line-height: 1.44;
+}
+
+.h1-subtitle {
+  font-size: 18px;
+  color: var(--text-40);
+}
+
+ul {
+  padding-left: 24px;
+  font-size: 20px;
+  color: var(--text-60);
+  margin: 8px 0 0 0;
+  line-height: 1.44;
+}
+
+.goals {
+  background: #f9f9f9;
+  padding: 32px;
+  border-radius: 12px;
+  margin-top: 32px;
 }
 
 a {
@@ -72,17 +93,55 @@ a {
 }
 
 a:hover {
-  color: var(--primary-darken);
+  color: var(--primary);
 }
 
 body > main {
-  max-width: 1232px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
-header {
+nav {
   max-width: 816px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+section {
+  max-width: 816px;
+  margin: 48px auto;
+}
+
+.mobile-case {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-case:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.mobile-case img,
+.mobile-case div {
+  width: 47%;
+}
+
+@media (max-width: 550px) {
+  .mobile-case {
+    flex-direction: column;
+  }
+
+  .mobile-case:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .mobile-case img,
+  .mobile-case div {
+    width: 100%;
+  }
 }
 
 .intro {
@@ -92,37 +151,71 @@ header {
   justify-content: space-between;
 }
 
-.intro p {
+.emphasized {
   font-size: 26px;
   color: var(--text);
-  max-width: 608px;
 }
 
 .avatar {
+  margin-left: 48px;
   border-radius: 50%;
 }
 
 .cards {
-  width: 100%;
+  max-width: 816px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 32px;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .card {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  background: black;
+  width: 100%;
+  background: var(--dark);
+  margin-top: 24px;
   box-shadow: var(--card-shadow);
   border-radius: 12px;
   color: var(--white);
-  padding: 32px;
-  margin: 0 8px;
   overflow: hidden;
   cursor: pointer;
   transition: background-color ease-in-out 0.1s;
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
+}
+
+.card__left {
+  width: 50%;
+  padding: 24px;
+  height: 240px;
+  overflow: hidden;
+  text-align: center;
+  background: transparent;
+  transition: background-color ease-in-out 0.1s;
+}
+
+.card__right {
+  padding: 24px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 550px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card .card__left {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .card:hover .card__left {
+    background-color: var(--primary-darken);
+  }
+
+  .card__left,
+  .card__right {
+    width: 100%;
+  }
 }
 
 .card p {
@@ -130,19 +223,15 @@ header {
   font-size: 18px;
 }
 
-.card img {
-  position: absolute;
-  border-radius: 8px;
-  top: 150px;
-  left: 24px;
-  right: 24px;
+.card__left img {
+  border-radius: 6px;
   transition: transform ease-in-out 0.1s;
-  max-width: calc(100% - 48px);
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .card:hover {
-  background: var(--primary-darken);
+  background: var(--primary);
 }
 
 .card:hover img {
@@ -150,20 +239,31 @@ header {
 }
 
 button,
-a.button {
+.button {
   cursor: pointer;
   border: none;
   background: var(--primary);
   font-size: 18px;
-  font-weight: 600;
-  padding: 8px 16px;
+  font-weight: 500;
   border-radius: 8px;
+  padding: 8px 16px;
   color: var(--white);
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 button:hover,
-a.button:hover {
+.button:hover {
+  background: var(--primary-darken);
+  color: var(--white);
+}
+
+.button--secondary {
+  background: #f7f7ff;
+  text-shadow: none;
+  color: var(--primary);
+}
+
+.button--secondary:hover {
   background: var(--primary-darken);
 }
 
@@ -208,6 +308,33 @@ a.button:hover {
   grid-row: 1;
   max-width: 100%;
 }
+
 .hidden {
   display: none;
+}
+
+.case-img {
+  box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 100%;
+  margin-bottom: 32px;
+}
+
+footer {
+  padding: 16px 0;
+  margin-top: 128px;
+}
+
+.footer__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__social-icon {
+  opacity: 0.5;
+  margin-left: 8px;
+}
+
+.footer__social-icon:hover {
+  opacity: 1;
 }
