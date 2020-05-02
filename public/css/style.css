@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text);
 }
 
@@ -63,8 +63,8 @@ h5 {
 p {
   font-size: 20px;
   color: var(--text-60);
-  margin: 4px 0 16px 0;
-  line-height: 1.44;
+  margin: 8px 0 16px 0;
+  line-height: 1.4;
 }
 
 .h1-subtitle {
@@ -80,7 +80,12 @@ ul {
   line-height: 1.44;
 }
 
+li {
+  margin-top: 4px;
+}
+
 .goals {
+  margin-bottom: 48px;
   background: #f9f9f9;
   padding: 32px;
   border-radius: 12px;
@@ -111,42 +116,16 @@ nav {
 
 section {
   max-width: 816px;
-  margin: 48px auto;
-}
-
-.mobile-case {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.mobile-case:nth-child(odd) {
-  flex-direction: row-reverse;
-}
-
-.mobile-case img,
-.mobile-case div {
-  width: 47%;
-}
-
-@media (max-width: 550px) {
-  .mobile-case {
-    flex-direction: column;
-  }
-
-  .mobile-case:nth-child(odd) {
-    flex-direction: column;
-  }
-
-  .mobile-case img,
-  .mobile-case div {
-    width: 100%;
-  }
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
 
 .intro {
   padding: 44px 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -220,7 +199,8 @@ section {
 
 .card p {
   color: var(--white-80);
-  font-size: 18px;
+  font-size: 20px;
+  margin-top: 0;
 }
 
 .card__left img {
@@ -287,12 +267,6 @@ button:hover,
   padding: 24px;
 }
 
-/* .video-container .video-button {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-} */
-
 .video-button {
   display: flex;
   align-items: center;
@@ -313,11 +287,22 @@ button:hover,
   display: none;
 }
 
-.case-img {
-  box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.1);
+.case-images {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.case-images__img {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   border-radius: 12px;
   max-width: 100%;
-  margin-bottom: 32px;
+  margin: 0 auto 32px auto;
+}
+
+.no-shadow {
+  box-shadow: none;
 }
 
 footer {
@@ -325,8 +310,19 @@ footer {
   margin-top: 128px;
 }
 
+footer a {
+  color: var(--text);
+  opacity: 0.5;
+}
+
+footer a:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
 .footer__section {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -337,4 +333,23 @@ footer {
 
 .footer__social-icon:hover {
   opacity: 1;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.description {
+  padding: 32px 0;
+  max-width: 816px;
+  margin: 0 auto;
+}
+
+.sticky {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
 }

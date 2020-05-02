@@ -1,61 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jelle | Discover</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav>
-        <a href="index.html" class="button button--secondary">Back</a>
-        <a href="index.html" class="button">See it live</a>
-    </nav>
-    <main>
-      <section>
-        <h1>Discover</h1>
-        <p class="h1-subtitle">Product design • TicketSwap</p>
-        <p>
-          The event page of TicketSwap is the most viewed on the platform. On this page listings thousands of fans are trying to get a ticket to their favourite show. Jim and I worked together on the UX and I finished the UI and led the implementation of the design. By researching Hotjar, conducting a survey, digging through the testimonials and the contact moments with our support team we composed those goals:
-        </p>
-        <div class="goals">
-            <h3>Goals</h3>
-            <ul>
-                <li>Set first steps towards event discovery.</li>
-                <li>Start serving event recommendations to learn from user behaviour and improve the recommendation model.</li>
-                <li>Increase retention of users.</li>
-            </ul>
-        </div>
-      </section>
-      
-      <section class="mobile-case">
-          <img
-            class="case-img"
-            src="img/discover/browse-events.png"
-            srcset="img/discover/browse-events.png 1x, img/discover/browse-events@2x.png 2x"
-          />
-          <div>
-          <h3>Browse events</h3>
-          <p>Using the browse event features users can find the right event on the right day. During this project my task was to start small and take a close look at what we already could implement with the data and back-end we had. The result where 3 filters for location, category and the date.</p>
-        </div>
-      </section>
 
-    <section class="mobile-case">
-      <img
-        class="case-img"
-        src="img/discover/browse-events.png"
-        srcset="img/discover/browse-events.png 1x, img/discover/browse-events@2x.png 2x"
-      />
-      <div>
-        <h3>Browse events</h3>
-        <p>Using the browse event features users can find the right event on the right day. During this project my task was to start small and take a close look at what we already could implement with the data and back-end we had. The result where 3 filters for location, category and the date.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jelle | Discover</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="button button--secondary">Back</a>
+    <a href="index.html" class="button">See it live</a>
+  </nav>
+  <main>
+    <section>
+      <h1>Discover</h1>
+      <p class="h1-subtitle">Product design • TicketSwap</p>
+      <p>
+        The event page of TicketSwap is the most viewed on the platform. On this page listings thousands of fans are
+        trying to get a ticket to their favourite show. Jim and I worked together on the UX and I finished the UI and
+        led the implementation of the design. By researching Hotjar, conducting a survey, digging through the
+        testimonials and the contact moments with our support team we composed those goals:
+      </p>
+      <div class="goals">
+        <h3>Goals</h3>
+        <ul>
+          <li>Set first steps towards event discovery.</li>
+          <li>Start serving event recommendations to learn from user behaviour and improve the recommendation model.
+          </li>
+          <li>Increase retention of users.</li>
+        </ul>
       </div>
     </section>
 
+    <section class="chapter">
+      <div class="description">
+        <h4>Browse Events</h4>
+        <p>
+          Using the browse event features users can find the right event on the right day. During this project my task
+          was to start small and take a close look at what we already could implement with the data and back-end we had.
+          The result where 3 filters for location, category and the date.
+        </p>
+      </div>
+      <div class="case-images">
+        <img class="case-images__img no-shadow" src="img/cases/discover/browse-events.png" srcset="
+            img/cases/discover/browse-events.png    1x,
+            img/cases/discover/browse-events@2x.png 2x
+          " />
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="description">
+        <h4>Event recommendations</h4>
+        <p>
+          The data scientists at TicketSwap have worked on creating a system that could recommend relevant events to
+          users. This project was the first time we were going to implement it and show the recommendations to the
+          users.
+        </p><p>At TicketSwap we didn’t have a team that could work fulltime on curated content so I decided to make
+          those recommendations the most prominent part of the app. The avatars of the artists already give some insight
+          in what kind it is and also help to create a rich event card when there is no event image available.
+        </p><p>
+          [in the actual app the recommendations actually show up quite subtle, this decision was made based on
+          technical constraints and will be improved in the future]
+        </p>
+      </div>
+      <div class="case-images">
+        <img class="case-images__img no-shadow" src="img/cases/discover/picked-for-you.png" srcset="
+            img/cases/discover/picked-for-you.png    1x,
+            img/cases/discover/picked-for-you@2x.png 2x
+          " />
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="description">
+        <h4>Cards</h4>
+        <p>
+          The data scientists at TicketSwap have worked on creating a system that could recommend relevant events to
+          users. This project was the first time we were going to implement it and show the recommendations to the
+          users.
+        </p><p>At TicketSwap we didn’t have a team that could work fulltime on curated content so I decided to make
+          those recommendations the most prominent part of the app. The avatars of the artists already give some insight
+          in what kind it is and also help to create a rich event card when there is no event image available.
+        </p><p>
+          [in the actual app the recommendations actually show up quite subtle, this decision was made based on
+          technical constraints and will be improved in the future]
+        </p>
+      </div>
+      <div class="case-images">
+        <img class="case-images__img no-shadow" src="img/cases/discover/cards.png" srcset="
+            img/cases/discover/cards.png    1x,
+            img/cases/discover/cards@2x.png 2x
+          " />
+      </div>
+    </section>
 
     <footer>
       <section class="footer__section">
@@ -73,14 +114,12 @@
           <a class="footer__social-icon" href="//twitter.com/jelleoverbeek">
             <img src="img/twitter.svg" />
           </a>
-          <a
-            class="footer__social-icon"
-            href="//www.linkedin.com/in/jelle-overbeek-a595b246/"
-          >
+          <a class="footer__social-icon" href="//www.linkedin.com/in/jelle-overbeek-a595b246/">
             <img src="img/linkedin.svg" />
           </a>
         </div>
       </section>
     </footer>
-  </body>
+</body>
+
 </html>
